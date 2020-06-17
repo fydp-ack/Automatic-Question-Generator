@@ -1,4 +1,6 @@
 import aqgFunction
+import os
+import sys
 
 
 # Main Function
@@ -6,8 +8,8 @@ def main():
     # Create AQG object
     aqg = aqgFunction.AutomaticQuestionGenerator()
 
-    inputTextPath = "input file path -- ?? ../DB/db.txt"
-    readFile = open(inputTextPath, 'r+', encoding="utf8")
+    inputTextPath = "/inputText.txt"
+    readFile = open(os.path.join(sys.path[0], "inputText.txt"), 'r+', encoding="utf8")
     #readFile = open(inputTextPath, 'r+', encoding="utf8", errors = 'ignore')
 
     inputText = readFile.read()
